@@ -1,5 +1,5 @@
 import styles from "./style.module.css"
-import videoPrincipal from "./Superman l Trailer Teaser Oficial Dublado.mp4"
+import videoPrincipal from "../../videos/Superman l Trailer Teaser Oficial Dublado.mp4"
 export default function ({ video }) {
     return (
         <div>

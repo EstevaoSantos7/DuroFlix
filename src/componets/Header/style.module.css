@@ -1,0 +1,98 @@
+header {
+    background-color: rgb(19, 17, 17);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0px 5px black;
+    gap: 25px;
+    margin-bottom: 4px;
+    width: 100%;
+    font-family: "Roboto", serif;
+
+
+
+    a {
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+        text-decoration: none;
+        
+    }
+
+    .opcoes {
+        gap: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+}
+a:hover{
+    
+        color: orange;
+    
+}
+
+.bar {
+    display: flex;
+    gap: 25px;
+    
+}
+
+header .bar a {
+    position: relative;
+    gap: 25px;
+    display: flex;
+
+}
+
+.bar a::after {
+    transition: 0.3s;
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+}
+
+.bar a:hover::after {
+width: 100%;
+}
+
+.lupa {
+    color: white;
+}
+
+.barraPesquisa {
+    display: flex;
+    width: 350px;
+    background-color: #222;
+    border-radius: 12px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+
+    span {
+        color: white;
+    }
+}
+
+.barra {
+    background: transparent;
+    border: 0;
+    color: white;
+
+
+}
+
+.barra:focus {
+    outline: none;
+}
+
+.barra::placeholder {
+    color: white;
+    font-family: inherit;
+}

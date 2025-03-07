@@ -1,0 +1,9 @@
+.trailerSessao {
+    gap: 35px;
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
