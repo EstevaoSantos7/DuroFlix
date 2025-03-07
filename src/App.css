@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pai {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  background-color: rgb(19, 17, 17);
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-shadow: 0px 5px black;
+  gap: 15px;
+  margin-bottom: 4px;
+  width: 100%;
+  font-family: "Roboto", serif;
+  h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+    /* margin: 6px 8px; */
+  }
+
+  .opcoes {
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+}
+
+.lupa {
+  color: white;
+}
+
+.barra-pesquisa {
+  display: flex;
+  width: 350px;
+  background-color: #222;
+  border-radius: 12px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+
+  span {
+    color: white;
+  }
+}
+
+.barra {
+  background: transparent;
+  border: 0;
+  color: white;
+
+
+}
+
+.barra:focus {
+  outline: none;
+}
+
+.barra::placeholder {
+  color: white;
+}
+
+.catalago-filmes {
+  display: flex;
+  justify-content: center;
+  background: black;
+  gap: 15px;
+  max-width: 1200px;
+}
+
+.titulo-filme {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 0px 14px 0px;
+
+  strong {
+    color: orange;
+  }
+}
+
+.catalago-filme-itens {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(19, 17, 17);
+  padding: 10px;
+}
+
+
+
+.grid-filmes-lista {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  gap: 14px;
+
+}
+
+.trailerSessao {
+  gap: 35px;
+  margin: 15px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
