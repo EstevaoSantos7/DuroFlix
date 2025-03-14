@@ -15,7 +15,7 @@ export default function Carrossel() {
       descricao:
         'Para transformar seu rolê em um mar de rosas, sirva um Corote Drinks Ice Pink Lemonade para os convidados e veja a magia acontecer. Uma deliciosa combinação de lima, limão, morango e vodka pronta para ser consumida bem gelada.',
       imagem: Milhoes,
-     
+
       link: '#'
     },
     {
@@ -69,33 +69,34 @@ export default function Carrossel() {
     }, 800); // Tempo da animação
 
 
-    
+
 
     return () => clearTimeout(timer); // Limpa o timer caso o componente seja desmontado
   }, [indiceAtual]); // Re-executa sempre que o índice do slide mudar
 
   return (
     <div className={styles.carrosselContainer}>
-     <div className={styles.carrosselSlide} >
-     {/* style={{ background: `linear-gradient(${slides[indiceAtual].cor1}, ${slides[indiceAtual].cor2})` }} */}
+      <div className={styles.carrosselSlide}>
+        {/* Adicionando um fundo escuro semi-transparente */}
+        <div className={styles.overlay}>
 
-        <div className={styles.carrosselTexto}>
-          <h2>{slides[indiceAtual].titulo}</h2>
-          <p>{slides[indiceAtual].descricao}</p>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.botaoComprar}
-            style={{ color: slides[indiceAtual] }}
-          >
-            Comprar
-          </a>
+          <div className={styles.carrosselTexto}>
+            <h2>{slides[indiceAtual].titulo}</h2>
+            <p>{slides[indiceAtual].descricao}</p>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.botaoComprar}
+            >
+              Comprar
+            </a>
+          </div>
         </div>
         <img
           src={slides[indiceAtual].imagem}
           alt={slides[indiceAtual].titulo}
-          className={animandoImagem ? styles.expand : ''} // Adiciona a animação de expansão
+          className={animandoImagem ? styles.expand : ''}
         />
       </div>
       <div className={styles.controlesCarrossel}>
@@ -107,5 +108,6 @@ export default function Carrossel() {
         </button>
       </div>
     </div>
+
   );
 }
