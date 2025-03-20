@@ -20,7 +20,7 @@ import CapitaoAmerica from './imgs/4k-captain.jpg'
 import Mc from './imgs/mc.jpg'
 
 import "./App.css";
-import Carrossel from "./componets/Carrossel";
+import Carrossel from './componets/Carrossel'
 
 
 const filmes = [

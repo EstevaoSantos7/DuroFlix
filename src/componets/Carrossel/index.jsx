@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from './style.module.css';
-import Milhoes from '../../imgs/km.jpg'
+import Original from '../../imgs/rosa.png'
+import Limao from '../../imgs/limao.png'
+import Ska from '../../imgs/SKA.png'
 import Ultimato from '../../imgs/avengers.webp'
-import Guardiao from '../../imgs/guardians.jpg'
-import Personagens from '../../imgs/1525209360975.png'
-
-
 import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa';
 
 export default function Carrossel() {
@@ -14,7 +12,7 @@ export default function Carrossel() {
       titulo: 'Pink Lemonade',
       descricao:
         'Para transformar seu rolê em um mar de rosas, sirva um Corote Drinks Ice Pink Lemonade para os convidados e veja a magia acontecer. Uma deliciosa combinação de lima, limão, morango e vodka pronta para ser consumida bem gelada.',
-      imagem: Milhoes,
+      imagem: Ultimato,
 
       link: '#'
     },
@@ -22,18 +20,16 @@ export default function Carrossel() {
       titulo: 'Limão',
       descricao:
         'Quando a vida nos dá limões, nós fazemos o quê? Ora, mas não poderia ser mais óbvio: um drink de Corote e um rolê, que é pra deixar todo mundo bem refrescado e super animado.',
-      imagem: Personagens,
-      cor1: '#024f24',
-      cor2: '#20f55c',
+      imagem: Ultimato,
+
       link: '#'
     },
     {
       titulo: 'Mango Jungle',
       descricao:
         'Uma mistura refrescante de Manga, Maracujá e Carambola, elaborada cuidadosamente para proporcionar uma experiência tropical única e revigorante.',
-      imagem: Guardiao,
-      cor1: 'rgb(165, 162, 14)',
-      cor2: 'rgb(245, 194, 77)',
+
+      imagem: Ultimato,
       link: '#'
     }
   ];
@@ -76,28 +72,25 @@ export default function Carrossel() {
 
   return (
     <div className={styles.carrosselContainer}>
-      <div className={styles.carrosselSlide}>
-        {/* Adicionando um fundo escuro semi-transparente */}
-        <div className={styles.overlay}>
+      <div className={styles.carrosselSlide} style={{ background: `url(${slides[indiceAtual].imagem})no-repeat center center/cover ` }}>
 
-          <div className={styles.carrosselTexto}>
-            <h2>{slides[indiceAtual].titulo}</h2>
-            <p>{slides[indiceAtual].descricao}</p>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.botaoComprar}
-            >
-              Comprar
-            </a>
-          </div>
+        <div className={styles.carrosselTexto}>
+          <h2>{slides[indiceAtual].titulo}</h2>
+          <p>{slides[indiceAtual].descricao}</p>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.botaoComprar}
+            style={{ color: slides[indiceAtual].cor }}
+          >
+            Comprar
+          </a>
         </div>
-        <img
-          src={slides[indiceAtual].imagem}
-          alt={slides[indiceAtual].titulo}
-          className={animandoImagem ? styles.expand : ''}
-        />
+
+
+        {/* className={animandoImagem ? styles.expand : ''} // Adiciona a animação de expansão */}
+
       </div>
       <div className={styles.controlesCarrossel}>
         <button className={styles.btnAnterior} onClick={irParaAnterior}>
@@ -108,6 +101,5 @@ export default function Carrossel() {
         </button>
       </div>
     </div>
-
   );
 }
