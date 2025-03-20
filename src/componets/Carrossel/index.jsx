@@ -4,6 +4,9 @@ import Original from '../../imgs/rosa.png'
 import Limao from '../../imgs/limao.png'
 import Ska from '../../imgs/SKA.png'
 import Ultimato from '../../imgs/avengers.webp'
+import Tempestade from '../../imgs/tempestade.jpg'
+import Minicraft from '../../imgs/Minecraft_movie-75d35b093d1fcdca2d2d.webp'
+
 import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa';
 
 export default function Carrossel() {
@@ -20,7 +23,7 @@ export default function Carrossel() {
       titulo: 'Limão',
       descricao:
         'Quando a vida nos dá limões, nós fazemos o quê? Ora, mas não poderia ser mais óbvio: um drink de Corote e um rolê, que é pra deixar todo mundo bem refrescado e super animado.',
-      imagem: Ultimato,
+      imagem: Minicraft,
 
       link: '#'
     },
