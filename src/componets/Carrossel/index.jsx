@@ -4,8 +4,10 @@ import Original from '../../imgs/rosa.png'
 import Limao from '../../imgs/limao.png'
 import Ska from '../../imgs/SKA.png'
 import Ultimato from '../../imgs/avengers.webp'
-import Tempestade from '../../imgs/tempestade.jpg'
+import F1 from '../../imgs/f1.webp'
+import F1Filme from '../../imgs/f1movie.jpg'
 import Minicraft from '../../imgs/Minecraft_movie-75d35b093d1fcdca2d2d.webp'
+import Madagascar from '../../imgs/madagascar.jpg'
 
 import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa';
 
@@ -32,7 +34,7 @@ export default function Carrossel() {
       descricao:
         'Uma mistura refrescante de Manga, Maracujá e Carambola, elaborada cuidadosamente para proporcionar uma experiência tropical única e revigorante.',
 
-      imagem: Ultimato,
+      imagem: F1Fikme,
       link: '#'
     }
   ];
